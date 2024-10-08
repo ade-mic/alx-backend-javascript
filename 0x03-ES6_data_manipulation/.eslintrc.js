@@ -28,6 +28,7 @@ module.exports = {
         'LabeledStatement',
         'WithStatement',
       ],
+      "indent": ["error", 2],
     },
     overrides:[
       {
