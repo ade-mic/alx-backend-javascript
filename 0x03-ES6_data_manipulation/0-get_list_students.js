@@ -1,6 +1,3 @@
-// Create a function named getListStudents that returns an array of objects.
-// Each object should have three attributes: id (Number), firstName (String),
-// and location (String).
 export default function getListStudents() {
   const arr = [ 
     {
