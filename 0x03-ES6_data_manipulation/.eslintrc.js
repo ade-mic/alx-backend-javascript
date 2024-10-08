@@ -6,7 +6,7 @@ module.exports = {
       jest: true,
     },
     extends: [
-      'airbnb-base',
+
       'plugin:jest/all',
     ],
     globals: {
