@@ -1,4 +1,12 @@
 export default function cleanSet(set, startString) {
+  if (!startString || typeof startString !== 'string') {
+    return '';
+  }
+
+  if (!set || !(set instanceof Set)) {
+    return '';
+  }
+
   let result = '';
   set.forEach((value) => {
     if (value.startsWith(startString)) {
