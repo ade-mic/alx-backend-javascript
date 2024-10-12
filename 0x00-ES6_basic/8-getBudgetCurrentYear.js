@@ -10,6 +10,5 @@ function getCurrentYear() {
       [`capita-${getCurrentYear()}`]: capita
     };
 
-
   return budget;
   }
