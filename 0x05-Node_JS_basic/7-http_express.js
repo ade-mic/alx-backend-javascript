@@ -1,7 +1,9 @@
 const express = require('express');
+
 const app = express();
 const PORT = 1245;
-fs = require('fs')
+const fs = require('fs');
+
 function countStudents(database) {
   return new Promise((resolve, reject) => {
     fs.readFile(database, 'utf-8', (err, data) => {
@@ -40,14 +42,14 @@ function countStudents(database) {
 }
 
 app.get('/', (req, res) => {
-  res.setHeader('Content-Type', 'text/plain')
+  res.setHeader('Content-Type', 'text/plain');
   res.send('Hello Holberton School!');
 });
 
 app.get('/students', (req, res) => {
   const database = process.argv[2];
   res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.write('This is the list of our students\n')
+  res.write('This is the list of our students\n');
   countStudents(database)
     .then((output) => {
       res.end(output);
@@ -55,7 +57,7 @@ app.get('/students', (req, res) => {
     .catch((error) => {
       res.end(error.message);
     });
-})
+});
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
