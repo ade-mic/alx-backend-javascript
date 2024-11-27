@@ -1,7 +1,7 @@
 const assert = require('assert');
 const calculateNumber = require('./0-calcul');
 
-describe('Math function', () => {
+describe('calculateNumber', () => {
   it('should return rounded addition of 2.4, 3.9', () => {
     assert.strictEqual(calculateNumber(2.4, 3.9), 6)
   })
