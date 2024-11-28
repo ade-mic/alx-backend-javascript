@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "- Using Mocha to write a test suite - using different assertion libraries (Node or Chai) - presenting long test suites - Using spies - using stubs - using hooks - Unit testing with Async functions - writing integration tests with a small node server",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "mocha"
   },
@@ -11,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^5.1.2",
+    "chai": "^4.3.7",
     "mocha": "^10.8.2"
   }
 }
