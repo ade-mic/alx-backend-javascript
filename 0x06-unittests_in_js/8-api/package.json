@@ -1,21 +1,25 @@
 {
     "name": "8-api",
     "version": "1.0.0",
-    "description": "",
+    "description": "- Using Mocha to write a test suite - using different assertion libraries (Node or Chai) - presenting long test suites - Using spies - using stubs - using hooks - Unit testing with Async functions - writing integration tests with a small node server",
     "main": "index.js",
     "scripts": {
-      "test": "./node_modules/mocha/bin/mocha"
+        "test": "mocha"
     },
+    "keywords": [],
     "author": "",
     "license": "ISC",
-    "dependencies": {
-      "express": "^4.17.1"
-    },
     "devDependencies": {
-      "chai": "^4.2.0",
-      "mocha": "^6.2.2",
-      "request": "^2.88.0",
-      "sinon": "^7.5.0"
+        "@eslint/js": "^9.15.0",
+        "chai": "^4.3.7",
+        "eslint": "^9.15.0",
+        "express": "^4.21.1",
+        "globals": "^15.12.0",
+        "mocha": "^10.8.2",
+        "request": "^2.88.2",
+        "sinon": "^19.0.2"
+    },
+    "dependencies": {
+        "package.json": "^2.0.1"
     }
-  }
-  
+}
