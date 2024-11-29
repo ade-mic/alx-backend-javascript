@@ -4,7 +4,7 @@ const app = express();
 
 // Define the root route
 app.get('/', (req, res) => {
-  res.json({ message: 'Welcome to the payment system' });
+  res.json({ message: 'Welcome to the payment system', statusCode: 200 });
 });
 
 // Start the server
