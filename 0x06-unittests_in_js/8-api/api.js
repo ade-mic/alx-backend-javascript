@@ -2,12 +2,11 @@ const express = require('express');
 
 const app = express();
 
-// Define the root route
+
 app.get('/', (req, res) => {
   res.status(200).json({ message: 'Welcome to the payment system' });
 });
 
-// Start the server
 const PORT = 7865;
 app.listen(PORT, () => {
   console.log(`API available on localhost port ${PORT}`);
