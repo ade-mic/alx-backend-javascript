@@ -13,4 +13,4 @@ app.listen(PORT, () => {
   console.log(`API available on localhost port ${PORT}`);
 });
 
-module.exports = app;
+module.exports = app; // Export the app for testing
