@@ -4,7 +4,7 @@ const app = express();
 
 // Define the root route
 app.get('/', (req, res) => {
-  res.send('Welcome to the payment system');
+  res.json({ message: 'Welcome to the payment system' });
 });
 
 // Start the server
