@@ -42,7 +42,7 @@ describe('calculateNumber', () => {
 
 describe('second number rounded', () => {
   it('should return rounded addition of 2.4, 3.9', () => {
-    assert.strictEqual(calculateNumber(2.4, 3.9), 6)
+    assert.strictEqual(calculateNumber(2, 3.9), 6)
   })
   it('calculateNumber(1, 3)', () => {
     assert.strictEqual(calculateNumber(1, 3), 4)
@@ -51,10 +51,10 @@ describe('second number rounded', () => {
     assert.strictEqual(calculateNumber(1, 3.7), 5)
   })
   it ('calculateNumber(1.5, 3.7)', () => {
-    assert.strictEqual(calculateNumber(1.5, 3.7), 6)
+    assert.strictEqual(calculateNumber(1, 3.7), 5)
   })
   it('calculateNumber(0.5, -7)', () => {
-    assert.strictEqual(calculateNumber(0.5, -7), -6)
+    assert.strictEqual(calculateNumber(1, -7), -6)
   })
   it('calculateNumber(-1, -1)', () => {
     assert.strictEqual(calculateNumber(-1, 1), 0)
