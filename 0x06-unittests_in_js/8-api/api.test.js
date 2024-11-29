@@ -1,35 +1,33 @@
-const chai = require('chai');
-const chaiHttp = require('chai-http');
-const { expect } = chai;
-
-chai.use(chaiHttp);
+process.noDeprecation = true;
+const request = require('request');
+const { expect } = require('chai');
 
 describe('Index page', () => {
-  it('Correct status code?', (done) => {
-    chai.request('http://localhost:7865')
-      .get('/')
-      .end((err, res) => {
-        expect(res).to.have.status(200);
-        done();
-      });
+  const url = 'http://localhost:7865/';
+
+  it('should return status code 200', (done) => {
+    request(url, (error, response, body) => {
+      expect(response.statusCode).to.equal(200);
+      done();
+    });
   });
 
-  it('Correct result?', (done) => {
-    chai.request('http://localhost:7865')
-      .get('/')
-      .end((err, res) => {
-        expect(res.body).to.be.an('object');
-        expect(res.body.message).to.equal('Welcome to the payment system');
-        done();
-      });
-  });
-
-  it('Other?', (done) => {
-    chai.request('http://localhost:7865')
-      .get('/')
-      .end((err, res) => {
-        expect(res.headers['content-type']).to.include('application/json');
-        done();
-      });
+  it('should return the correct message', (done) => {
+    request(url, (error, response, body) => {
+      expect(body).to.equal('Welcome to the payment system');
+      done();
+    });
   });
 });
+
+describe('Index page', () => {
+  const endpoint = 'http://localhost:7865';
+
+  it('Returns the right status', function (done) {
+    request(endpoint, function (error, response, body) {
+      expect(response.statusCode).to.equal(200);
+      done();
+    });
+  });
+});
+

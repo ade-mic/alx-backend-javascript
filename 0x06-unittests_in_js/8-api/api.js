@@ -4,7 +4,7 @@ const app = express();
 
 // Define the root route
 app.get('/', (req, res) => {
-  res.json({ message: 'Welcome to the payment system' });
+  res.send('Welcome to the payment system');
 });
 
 // Start the server
@@ -13,4 +13,4 @@ app.listen(PORT, () => {
   console.log(`API available on localhost port ${PORT}`);
 });
 
-module.exports = app; // Export the app for testing
+module.exports = app;
